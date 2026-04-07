@@ -1,0 +1,81 @@
+# Linux Command Practice 🚀
+
+Today I practiced solving basic Linux command challenges using the terminal.
+These tasks helped me understand how to work with files, text processing, and command chaining.
+
+---
+
+## 🧩 Tasks & Solutions
+
+### 1. Count GET requests in a log file
+
+Print the number of lines in `access.log` that contain the string "GET".
+
+```bash
+cat access.log | grep "GET" | wc -l
+```
+
+---
+
+### 2. Split values separated by ;
+
+The file `split-me.txt` contains numbers separated by `;`.
+Split them so each number is on a new line.
+
+```bash
+cat split-me.txt | tr ';' '\n'
+```
+
+---
+
+### 3. Print numbers from 1 to 100
+
+Print numbers 1 to 100 separated by spaces.
+
+```bash
+seq 1 100 | paste -sd' '
+```
+
+---
+
+### 4. Remove a phrase from all .txt files (recursively)
+
+Delete the phrase "challenges are difficult" from all `.txt` files, including those in subdirectories.
+
+```bash
+find . -name '*.txt' -exec sed -i 's/challenges are difficult//g' {} \;
+```
+
+---
+
+### 5. Sum numbers from a file
+
+The file `sum-me.txt` contains numbers (one per line).
+Print the total sum of those numbers.
+
+```bash
+cat sum-me.txt | paste -sd+ | bc
+```
+
+---
+
+## What I Learned
+
+* How to use pipes `|` to combine commands
+* Filtering text with `grep`
+* Replacing and editing text using `sed`
+* Transforming text with `tr`
+* Working with multiple files using `find`
+* Performing calculations in the terminal using `bc`
+
+---
+
+## Goal
+
+I am practicing Linux commands to improve my problem-solving skills and build a strong foundation for cybersecurity and system administration.
+
+---
+
+## 📌 Note
+
+This is part of my daily practice. I will continue solving more challenges and updating this repository.
